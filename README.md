@@ -31,3 +31,9 @@ Random Forrest | -.0243
 The results overall are lackluster but considering the high noise level in all financial data it seems like a promising start. Resdiuals were examined for all 3 models for serial correlation but all proved to be white noise. A small subet of linear regression resdiuals are below. 
 
 ![residuals](https://user-images.githubusercontent.com/106636917/232360776-984ad405-504f-4c76-9168-e67fc9198ca1.JPG)
+
+## Further Research ##
+Overall I was extremely limited compuationaly for this project. A more in-depth grid search for model paramters would almost certaintly yield better results. I also plan to look into the applications of multi headed attention or LSTM models in combination with the delayed embeddings to see if that is has more promising results. 
+If you've made it this far feel free to reach out to me I am currently looking for Summer 2023 internship opportunities
+
+
