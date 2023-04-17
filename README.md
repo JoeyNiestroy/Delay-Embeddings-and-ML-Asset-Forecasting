@@ -4,10 +4,27 @@
 An exploration into delay embeddings on time series data for the purpose of short term forecasting stock data
 
 ## Data and Preprocessing #
-Minute by minute price data for apple stock was used as the foundational time series for this project. Data was aquired through AlphaAdvantage API (they were very kind in giving me academic access for this purpose). Orginal time series plot showed obvious random walk pattern so first order differencing was applied. ![Graph](https://user-images.githubusercontent.com/106636917/232355508-6dd6aea3-64fa-4b82-9390-d84780013ba5.JPG)
+Minute by minute price data for apple stock was used as the foundational time series for this project. Data was aquired through AlphaAdvantage API (they were very kind in giving me academic access for this purpose). Only trading hours data were used (9am-4:30pm). Orginal time series plot showed obvious random walk pattern so first order differencing was applied. ![Graph](https://user-images.githubusercontent.com/106636917/232355508-6dd6aea3-64fa-4b82-9390-d84780013ba5.JPG)
 Data was proven to be stationary by AdFuller test after the differencing. From here ACF was used to try and determine optimal tau value for embedding transformation.
-![ACF]
-(https://user-images.githubusercontent.com/106636917/232355827-a671b543-4ed2-45c6-8ba9-aa641446573e.JPG)
+
+![ACF](https://user-images.githubusercontent.com/106636917/232355827-a671b543-4ed2-45c6-8ba9-aa641446573e.JPG)
 
 
-After testing entire dataset with ACF no significant lags were discovered so smaller windows of recent data were explored in the hopes of shorter term paterns emerging but similar results were found. Data is clearly white noise, but whats the fun in giving up now
+After testing entire dataset with ACF no significant lags were discovered so smaller windows of recent data were explored in the hopes of shorter term paterns emerging but similar results were found, lags were set to 600. Data is clearly white noise, but whats the fun in giving up now
+
+## Delayed Embedding Creation ##
+The GTDA package was used to create delayed embeddings. tau was set to 7 (highest significance value from acf) and dimensions were set to be 195 (giving the embeddings roughly a 3 day time range of information). These embeddings produced the following 3 dimensional point cloud.
+
+![point_cloud](https://user-images.githubusercontent.com/106636917/232356769-cdfd1c00-59ac-4957-af59-89bcc504225c.JPG)
+
+The structure shows no obvious signs of patterns, but topological analysis may yield some results (beyond my current knowledge of mathmatics) 
+
+## Modeling and Results ##
+The target used for forecasting was the asset price 60min from embedding point. 3 Common ML methods were tested for their application with the embeddings. The results are the following
+
+Model Type    | R^2
+------------- | -------------
+Linear Regression  | -0.0982
+Content Cell  | Content Cell
+
+-0.09826625204515871
