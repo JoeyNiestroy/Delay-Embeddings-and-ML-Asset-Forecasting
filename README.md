@@ -13,7 +13,7 @@ Data was proven to be stationary by AdFuller test after the differencing. From h
 After testing entire dataset with ACF no significant lags were discovered so smaller windows of recent data were explored in the hopes of shorter term paterns emerging but similar results were found, lags were set to 600. Data is clearly white noise, but whats the fun in giving up now
 
 ## Delayed Embedding Creation ##
-The GTDA package was used to create delayed embeddings. tau was set to 7 (highest significance value from acf) and dimensions were set to be 195 (giving the embeddings roughly a 3 day time range of information). These embeddings produced the following 3 dimensional point cloud.
+The GTDA package was used to create delayed embeddings. tau was set to 14 (highest significance value from acf) and dimensions were set to be 195 (giving the embeddings roughly a 7 day time range of information). These embeddings produced the following 3 dimensional point cloud.
 
 ![point_cloud](https://user-images.githubusercontent.com/106636917/232356769-cdfd1c00-59ac-4957-af59-89bcc504225c.JPG)
 
@@ -33,7 +33,7 @@ The results overall are lackluster but considering the high noise level in all f
 ![residuals](https://user-images.githubusercontent.com/106636917/232360776-984ad405-504f-4c76-9168-e67fc9198ca1.JPG)
 
 ## Further Research ##
-Overall I was extremely limited compuationaly for this project. A more in-depth grid search for model paramters would almost certaintly yield better results. I also plan to look into the applications of multi headed attention or LSTM models in combination with the delayed embeddings to see if that is has more promising results. 
-If you've made it this far feel free to reach out to me I am currently looking for Summer 2023 internship opportunities
+Overall I was extremely limited compuationaly for this project. A more in-depth grid search for model paramters optimization would almost certaintly yield better results. I also plan to look into the applications of multi headed attention or LSTM models in combination with the delayed embeddings to see if that is has more promising results. 
+(Note: Feel free to reach out to me I am currently looking for Summer 2023 internship opportunities )
 
 
