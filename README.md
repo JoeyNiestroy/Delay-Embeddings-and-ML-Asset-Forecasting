@@ -20,7 +20,7 @@ The GTDA package was used to create delayed embeddings. tau was set to 14 (highe
 The structure shows no obvious signs of patterns, but topological analysis may yield some results (beyond my current knowledge of mathmatics) 
 
 ## Modeling and Results ##
-The target used for forecasting was the asset price 60min from embedding point. Test data was the last 40 sequential minutes. 3 Common ML methods were tested for their application with the embeddings. The results are the following
+The target used for forecasting was the asset price 60min from embedding point. Training data was 100k sequential samples, test data was the last 40 sequential minutes. 3 Common ML methods were tested for their application with the embeddings. The results are the following
 
 Model Type    | R^2 on Test Data
 ------------- | -------------
