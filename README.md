@@ -1,8 +1,7 @@
 # Delay-Embeddings-and-ML-Asset-Forecasting
 
 # Overview #
-An exploration into delay embeddings on time series data for the purpose of short term forecasting stock data.
-Final model goal was to use delay embedding for stock at $x_t$ and predict price at $x_{t+60}$ using various ML algos. 
+An exploration into delay embeddings on time series data for the purpose of short term forecasting stock data. Final model goal was to use delay embedding for stock at $x_t$ and predict price at $x_{t+60}$ using various ML algos. 
 
 ## Data and Preprocessing #
 Minute by minute price data for apple stock was used as the foundational time series for this project. Data was aquired through AlphaAdvantage API (they were very kind in giving me academic access for this purpose). Only trading hours data were used (9:30am-4pm). Orginal time series plot showed obvious random walk pattern so first order differencing was applied. ![Graph](https://user-images.githubusercontent.com/106636917/232355508-6dd6aea3-64fa-4b82-9390-d84780013ba5.JPG)
