@@ -34,6 +34,6 @@ The results overall are lackluster but considering the high noise level in all f
 
 ## Further Research ##
 Overall I was extremely limited compuationaly for this project. A more in-depth grid search for model paramters optimization would almost certaintly yield better results. I also plan to look into the applications of multi headed attention or LSTM models in combination with the delayed embeddings to see if that is has more promising results. 
-(Note: Feel free to reach out to me I am currently looking for Summer 2023 internship opportunities )
+
 
 
