@@ -1,9 +1,12 @@
 # Delay-Embeddings-and-ML-Asset-Forecasting
 
 # Overview #
-An exploration into delay embeddings on time series data for the purpose of short term forecasting stock data. Final model goal was to use delay embedding for stock at $x_t$ and predict price at $x_{t+60}$ using various ML algos. 
+An exploration into delay embeddings on time series data for the purpose of short term forecasting stock data. Final goal was to use delay embedding for stock at $x_t$ and predict price at $x_{t+60}$ using various regression ML algos. 
 
-## Data and Preprocessing #
+## Backround Research and Reasoning ##
+Delay embeddings are a technique from the field of nonlinear dynamics that involves creating a higher-dimensional representation of a time series by embedding it in a space of delayed copies of itself. Each dimension of the embedding space represents a different time delay, and by choosing appropriate delays, it is possible to capture the underlying dynamics of the system. They can also help to reduce the impact of noise in the data. Due to financial data's high noise and non-linear patterns time delay embeddings seemed like a promising option for forecasting. 
+
+## Data and Preprocessing ##
 Minute by minute price data for apple stock was used as the foundational time series for this project. Data was aquired through AlphaAdvantage API (they were very kind in giving me academic access for this purpose). Only trading hours data were used (9:30am-4pm). Orginal time series plot showed obvious random walk pattern so first order differencing was applied. ![Graph](https://user-images.githubusercontent.com/106636917/232355508-6dd6aea3-64fa-4b82-9390-d84780013ba5.JPG)
 Data was proven to be stationary by AdFuller test after the differencing. From here ACF was used to try and determine optimal tau value for embedding transformation.
 
