@@ -36,7 +36,6 @@ The results overall are lackluster but considering the high noise level in all f
 ![residuals](https://user-images.githubusercontent.com/106636917/232360776-984ad405-504f-4c76-9168-e67fc9198ca1.JPG)
 
 ## Further Research ##
-Overall I was extremely limited compuationaly for this project. A more in-depth grid search and backtesting for model paramters optimization would almost certaintly yield better results. I also plan to look into the applications of multi headed attention or LSTM models in combination with the delayed embeddings to see if that is has more promising results. 
-
+Overall I was extremely limited compuationaly for this project. A more in-depth grid search and backtesting for model paramters optimization would almost certaintly yield better results. The non-constant variance in test data should also be explored 
 
 
