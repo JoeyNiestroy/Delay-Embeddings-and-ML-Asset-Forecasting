@@ -20,7 +20,7 @@ The GTDA package was used to create delayed embeddings. tau was set to 14 (highe
 
 ![point_cloud](https://user-images.githubusercontent.com/106636917/232356769-cdfd1c00-59ac-4957-af59-89bcc504225c.JPG)
 
-The structure shows no obvious signs of patterns, but topological analysis may yield some results (beyond my current knowledge of mathmatics) 
+The structure shows no obvious signs of patterns, but topological analysis may yield some results.
 
 ## Modeling and Results ##
 The target used for forecasting was the asset price 60min from embedding point. Training data was 100k sequential samples, test data was the last 40 sequential minutes. 3 Common ML methods were tested for their application with the embeddings. The results are the following
@@ -35,7 +35,5 @@ The results overall are lackluster but considering the high noise level in all f
 
 ![residuals](https://user-images.githubusercontent.com/106636917/232360776-984ad405-504f-4c76-9168-e67fc9198ca1.JPG)
 
-## Further Research ##
-Overall I was extremely limited compuationaly for this project. A more in-depth grid search and backtesting for model paramters optimization would almost certaintly yield better results. The non-constant variance in test data should also be explored 
 
 
